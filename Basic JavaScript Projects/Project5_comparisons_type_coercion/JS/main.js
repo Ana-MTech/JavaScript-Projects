@@ -25,10 +25,14 @@ function myCall5 () {
     }
 
 function myCall6 () {
+    document.write(5 > 1 && 10 > 4);
+}
 
     
 function myCall7 () {
+    document.write(5 < 1 || 4 < 7);
+}
 
 function myCall9 () {
-
-                    
+    document.getElementById ("Not"). inner HTML = ! (5 > 1);
+}
