@@ -5,6 +5,8 @@
         else if (new Date().getHours() < 10) {
         document.getElementById("My_Function") .innerHTML = "Time to get up! Good morning!";
         }
+        else (new Date().getHours() < 19) {
+        document.getElementById("My_Function") .innerHTML = "Good afternoon!"    
     }
     
     var x = 10;  // It is a Global Variable  
