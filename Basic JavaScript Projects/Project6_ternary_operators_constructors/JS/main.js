@@ -26,7 +26,7 @@ function count_Function()  {
     document.getElementById("Nested_Function") .innerHTML = Calculate() ;
     function Calculate() {
         var Price = 20;
-        function Voucher() {Price -= 5;}
+        function Voucher() {Price -= 5;} // Nested function
         Voucher() ;
         return Price ;
         }
