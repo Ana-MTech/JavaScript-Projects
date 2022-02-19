@@ -18,7 +18,8 @@ function Input_Digit(digit) {
     if (Wait_Second_Operand === true) {
         Calculator.Display_Value = digit;
         Calculator.Wait_Second_Operand = false;
-    } else {
+    } 
+    else {
     // this owerwrites Display_Value if the current value is 0
     // otherwise it adds onto it
       Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
@@ -50,18 +51,18 @@ function Handle_Operator(Next_Operator) {
     }
     if (First_Operand == null) {
         Calculator.First_Operand = Value_of_Input;
-    } else if (operator) {//checks if an operator already exist
+    } 
+    else if (operator) {//checks if an operator already exist
         const Value_Now = First_Operand || 0;
         //if operator exists, property lookup is performed for the operator
         //in the Perform_Calculation object and the function that matches the operatpr is executed
-        let result = Perform_Calculation[operator] (Value_Now, Value_of_Input);
+        let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
         //here we add a fixed amount of numbers after the decimal
         result = Number(result).toFixed(9)
         //this will remove any trailing 0's
         result = (result * 1).toString()
         Calculator.Display_Value = parseFloat(result);
         Calculator.First_Operand = parseFloat(result);
-    
     }
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
@@ -72,7 +73,7 @@ const Perform_Calculation = {
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
     '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
-    '=': (First_Operand, Second_Operand) => Second_Operand,
+    '=': (First_Operand, Second_Operand) => Second_Operand
 };
 
 function Calculator_Reset() {
@@ -87,30 +88,30 @@ function Update_Display() {
     display.value = Calculator.Display_Value;
 }
 
-Update_Display() {
+Update_Display() 
     //this section monitors button clicks
     const keys = document.querySelector('.calculator-keys');
     keys.addEventListener('click', (event) => {
     // the target variable is an object that represents the elelement that was clicked
-    const { target } = event;
+    const {target} = event;
     // of the element that was clicked on is not a button, exit the function
     if (!target.matches('button')) {
         return;
     }
 
-    if (target.class.List.containes('operator')) {
+    if (target.class.List.contains('operator')) {
         Handle_Operator(target.values);
         Update_Display();
         return;
     }
     
-    if (target.classList.containes('decimal')) {
+    if (target.classList.contains('decimal')) {
         Input_Decimal(target.value);
         Update_Display();
         return;
     }
-    // ensures that AC clears the number from the Calculator
-    if (target.classList.containes('all-clear')) {
+    // ensures that when clicked AC clears the number from the Calculator
+    if (target.classList.contains('all-clear')) {
         Calculator_Reset();
         Update_Display();
         return;
