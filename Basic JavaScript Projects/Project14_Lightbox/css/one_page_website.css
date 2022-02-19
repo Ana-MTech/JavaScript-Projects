@@ -1,0 +1,301 @@
+
+html {
+    font-family: 'Josefin Slab', serif;
+    font-size: 62,5%;
+    margin: 0; 
+    padding: 0; 
+   }
+
+   
+
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  line-height: 1.42857143;
+  color: #61637D;
+}
+
+section{width:100%; height:1000px; float:left;}
+
+#pageA{background:#9394A6;}
+#pageB{background:#EFE7CF;}
+#pageC{background:#D6D6DC;}
+/*#pageD{background:#A9AAB3;}*/
+#pageD{background: url(../images/Picture5.jpg);
+ background-attachment: fixed;
+-webkit-background-size: cover;
+-ms-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width:100%;
+}
+
+
+.wrap {
+    text-align: center;
+    }
+
+.menu {
+    font: bold 20px/4'Josefin Slab', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-container {
+width:100%; position:fixed; z-index:1; top:100px;}
+ul {display:inline-block; margin:0; padding:0;zoom:1;}
+ul li{float:left; margin-right:30px;}
+ul li a{color: #E4E2E2; text decoration:none;}
+ul li a:hover{text-decoration:underline;
+}
+
+
+h1{
+    text-transform: uppercase;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #61637D; 
+    text-align:center; 
+ }
+
+h2{
+color: #E4E2E2; 
+text-align:center;
+text-decoration: none;
+}
+
+h3{
+    color: #61637D; 
+    text-align:left;
+    text-decoration: underline;
+    }
+
+.Tutorial{
+    color: #61637D; 
+    text-align:center;
+    text-decoration: none;
+}
+
+article{
+list-style-type: circle;
+font-size:18px;
+line-height:24px;
+text-align:left;
+margin-left: 25px;
+margin-right: 25px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.iframe-container{
+    position: relative;
+    margin: 20px;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container iframe{
+    position: relative;
+    top:100px;
+    left: 0;
+    width: 50%;
+    height: 50%;
+}
+
+/*CONTACT FORM*/
+
+input[type=text], select, textarea {
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+    color: #78798B;
+    padding: 12px;
+    border: 1px solid #EDCDCE;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 12px;
+    background-color: #EFE7CF;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color:#78798B;
+    color: #EFE7CF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    box-shadow: 0 0 10px #A29394;
+    color: #78798B;
+    background-color: #EDCDCE;
+  }
+  
+  .container {
+    border-radius: 5px;
+    /*background-color: #F5E7F5;*/
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /*STYLE TUTORIAL*/
+  iframe {text-align: center; style="border:none;"}
+  
+  
+  
+  /* STYLE OF THE FOOTER */
+  
+  #footer {
+    background-color: #78798B;
+    color:#EFE7CF;
+    text-shadow: 2px 2px 8px (0,0,0,0.4);
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
